@@ -1,16 +1,16 @@
 :root {
     /* Color Palette - Premium Medical Blue Theme */
-    --bg-dark: #020813;
-    --bg-card: rgba(10, 25, 47, 0.4);
-    --bg-alt: #051021;
+    --bg-dark: #0a1128;
+    --bg-card: rgba(16, 30, 60, 0.6);
+    --bg-alt: #0f1c3f;
     
-    --primary: #2563eb;
-    --primary-light: #3b82f6;
-    --primary-dark: #1e40af;
-    --primary-glow: rgba(37, 99, 235, 0.5);
+    --primary: #0071c5;
+    --primary-light: #3399ff;
+    --primary-dark: #004d8c;
+    --primary-glow: rgba(0, 113, 197, 0.5);
     
-    --secondary: #0ea5e9;
-    --secondary-glow: rgba(14, 165, 233, 0.3);
+    --secondary: #00b4d8;
+    --secondary-glow: rgba(0, 180, 216, 0.3);
     
     --text-main: #f8fafc;
     --text-muted: #cbd5e1;
@@ -223,7 +223,7 @@ ul {
 }
 
 .navbar.scrolled {
-    background: rgba(2, 8, 19, 0.85);
+    background: rgba(10, 17, 40, 0.85);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--glass-border);
     padding: 1rem 0;
@@ -341,7 +341,7 @@ ul {
     right: -5%;
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(37,99,235,0.15) 0%, rgba(2,8,19,0) 70%);
+    background: radial-gradient(circle, rgba(0,113,197,0.15) 0%, rgba(10,17,40,0) 70%);
 }
 
 .glow-2 {
@@ -349,7 +349,7 @@ ul {
     left: -10%;
     width: 500px;
     height: 500px;
-    background: radial-gradient(circle, rgba(14,165,233,0.1) 0%, rgba(2,8,19,0) 70%);
+    background: radial-gradient(circle, rgba(14,165,233,0.1) 0%, rgba(10,17,40,0) 70%);
 }
 
 .hero-container {
@@ -362,8 +362,8 @@ ul {
 .tagline {
     display: inline-block;
     padding: 0.5rem 1rem;
-    background: rgba(37, 99, 235, 0.1);
-    border: 1px solid rgba(37, 99, 235, 0.3);
+    background: rgba(0, 113, 197, 0.1);
+    border: 1px solid rgba(0, 113, 197, 0.3);
     border-radius: 50px;
     color: var(--primary-light);
     font-size: 0.9rem;
@@ -425,7 +425,7 @@ ul {
     position: absolute;
     width: 60%;
     height: 60%;
-    background: radial-gradient(circle, rgba(37,99,235,0.4) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(0,113,197,0.4) 0%, transparent 70%);
     filter: blur(40px);
     z-index: -1;
 }
@@ -436,7 +436,7 @@ ul {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 2rem;
-    filter: drop-shadow(0 0 20px rgba(37,99,235,0.5));
+    filter: drop-shadow(0 0 20px rgba(0,113,197,0.5));
 }
 
 .showcase-stats {
@@ -502,19 +502,19 @@ ul {
 
 .product-image-container {
     width: 100%;
-    height: 250px;
+    aspect-ratio: 1;
     border-radius: 12px;
     overflow: hidden;
     margin-bottom: 1.5rem;
     position: relative;
-    background: rgba(255, 255, 255, 0.05);
+    background: #ffffff;
     border: 1px solid var(--glass-border);
 }
 
 .product-img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     transition: var(--transition-smooth);
 }
 
@@ -529,7 +529,7 @@ ul {
     width: 45px;
     height: 45px;
     border-radius: 12px;
-    background: rgba(2, 8, 19, 0.8);
+    background: rgba(10, 17, 40, 0.8);
     backdrop-filter: blur(5px);
     display: flex;
     align-items: center;
@@ -541,7 +541,7 @@ ul {
 }
 
 .laser-icon {
-    background: linear-gradient(135deg, rgba(14, 165, 233, 0.2), rgba(37, 99, 235, 0.1));
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.2), rgba(0, 113, 197, 0.1));
     color: var(--secondary);
     border-color: rgba(14, 165, 233, 0.3);
 }
@@ -629,7 +629,7 @@ ul {
     transform: translate(-50%, -50%);
     width: 80%;
     height: 80%;
-    background: radial-gradient(circle, rgba(37,99,235,0.15) 0%, transparent 60%);
+    background: radial-gradient(circle, rgba(0,113,197,0.15) 0%, transparent 60%);
     filter: blur(40px);
     pointer-events: none;
 }
@@ -767,7 +767,7 @@ ul {
         top: 100%;
         left: 0;
         width: 100%;
-        background: rgba(2, 8, 19, 0.98);
+        background: rgba(10, 17, 40, 0.98);
         backdrop-filter: blur(20px);
         flex-direction: column;
         padding: 1.5rem;
