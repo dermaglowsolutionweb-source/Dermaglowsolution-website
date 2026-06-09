@@ -79,6 +79,8 @@ const PRODUCTS = [
     { name: '360 CRYO + EMS + 40K + RF', category: 'Cryopilopysis', image: '../images/Cryopilopysis/1.jpeg' },
     { name: '360 CRYO PILOPYSIS', category: 'Cryopilopysis', image: '../images/Cryopilopysis/2.jpeg' },
     { name: '10 IN 1 80K SLIMMING MACHINE', category: 'Cryopilopysis', image: '../images/Cryopilopysis/3.jpeg' },
+    { name: 'Advanced Cryopilopysis Machine', category: 'Cryopilopysis', image: '../images/Cryopilopysis/4.jpeg' },
+
     { name: '10 in 1 Hydra Facial Machine', category: 'Premium Hydra', image: '../images/Premium%20Hydra%20Machines/5.jpeg' },
     { name: '12 in 1 Hydra Facial Machine', category: 'Premium Hydra', image: '../images/ai_hydra_5.png' },
     { name: '14 in 1 Hydra Facial Machine', category: 'Premium Hydra', image: '../images/ai_hydra_6.png' },
