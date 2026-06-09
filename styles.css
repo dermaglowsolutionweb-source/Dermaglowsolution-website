@@ -1061,10 +1061,10 @@ ul {
 /* Feedback Grid */
 .feedback-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
     margin-top: 2rem;
-    max-width: 600px; /* Reduced from 900px to make images much smaller */
+    max-width: 900px; /* Increased back to 900px for 3 items per row */
     margin-left: auto;
     margin-right: auto;
 }
@@ -1088,4 +1088,10 @@ ul {
     height: 100%;
     object-fit: contain; /* Changed to contain so it doesn't crop the original image weirdly */
     display: block;
+}
+
+@media (max-width: 768px) {
+    .feedback-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
