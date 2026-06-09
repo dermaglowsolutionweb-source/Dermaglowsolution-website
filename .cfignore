@@ -1,0 +1,6 @@
+.git/
+.github/
+wa.b/
+*.py
+*.log
+.gitignore
