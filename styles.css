@@ -1020,3 +1020,37 @@ ul {
     font-weight: 500;
     margin: 0;
 }
+
+/* Custom Checklist */
+.checklist-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    backdrop-filter: blur(10px);
+}
+
+.custom-checklist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.custom-checklist li {
+    font-size: 1.25rem;
+    color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.custom-checklist li i {
+    color: #00d26a; /* Bright Green */
+    font-size: 1.5rem;
+    margin-right: 15px;
+}
