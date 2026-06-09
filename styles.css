@@ -1064,7 +1064,7 @@ ul {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
     margin-top: 2rem;
-    max-width: 900px;
+    max-width: 600px; /* Reduced from 900px to make images much smaller */
     margin-left: auto;
     margin-right: auto;
 }
@@ -1074,7 +1074,8 @@ ul {
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    aspect-ratio: 4/5;
+    aspect-ratio: 1; /* Changed from 4/5 to make them square and less tall */
+    background: rgba(0,0,0,0.05);
 }
 
 .feedback-item:hover {
@@ -1085,6 +1086,6 @@ ul {
 .feedback-img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain; /* Changed to contain so it doesn't crop the original image weirdly */
     display: block;
 }
