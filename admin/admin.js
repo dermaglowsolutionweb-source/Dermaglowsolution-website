@@ -84,6 +84,8 @@ const PRODUCTS = [
     { name: '10 in 1 Hydra Facial Machine', category: 'Premium Hydra', image: '../images/Premium%20Hydra%20Machines/5.jpeg' },
     { name: '12 in 1 Hydra Facial Machine', category: 'Premium Hydra', image: '../images/ai_hydra_5.png' },
     { name: '14 in 1 Hydra Facial Machine', category: 'Premium Hydra', image: '../images/ai_hydra_6.png' },
+        { name: 'Laser Hair Removal Regrowth Machine - Model 1', category: 'Laser hair removal regrowth machine', image: '../images/Laser%20hair%20removal%20regrowth%20machine/1.jpeg' },
+    { name: 'Laser Hair Removal Regrowth Machine - Model 2', category: 'Laser hair removal regrowth machine', image: '../images/Laser%20hair%20removal%20regrowth%20machine/2.jpeg' },
     { name: 'AI face analyser - Model 1', category: 'AI Face Analyser', image: '../images/ai_face_1_1780916138905.png' },
     { name: 'AI face analyser - Model 2', category: 'AI Face Analyser', image: '../images/ai_face_2_1780916153295.png' },
     { name: 'AI scalp analyzer - Model 1', category: 'AI Scalp Analyzer', image: '../images/ai_scalp_1_1780916166460.png' },
