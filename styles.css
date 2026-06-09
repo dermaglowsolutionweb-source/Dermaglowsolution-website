@@ -1028,11 +1028,13 @@ ul {
 .checklist-container {
     max-width: 800px;
     margin: 0 auto;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(16, 30, 60, 0.6); /* Dark glassmorphism to match theme */
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 16px;
     padding: 2.5rem;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
 }
 
 .custom-checklist {
@@ -1046,7 +1048,7 @@ ul {
 
 .custom-checklist li {
     font-size: 1.25rem;
-    color: var(--text-dark);
+    color: #f8fafc; /* White text to stand out on dark background */
     display: flex;
     align-items: center;
     font-weight: 500;
