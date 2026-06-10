@@ -22,7 +22,7 @@ const ADMIN_USERS = {
 
 // Check Auth state on load
 document.addEventListener('DOMContentLoaded', () => {
-    const isDashboard = window.location.pathname.includes('dashboard.html');
+    const isDashboard = window.location.pathname.includes('dashboard');
     const isLoggedIn = localStorage.getItem('admin_logged_in') === 'true';
 
     if (isDashboard && !isLoggedIn) {
