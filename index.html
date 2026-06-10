@@ -984,28 +984,38 @@
         const app = initializeApp(firebaseConfig);
         const db = getFirestore(app);
 
-        async function hideDisabledProducts() {
+        async function applyFirebaseSettings() {
             try {
                 const docRef = doc(db, "settings", "visibility");
                 const docSnap = await getDoc(docRef);
                 
                 if (docSnap.exists()) {
                     const hiddenNames = docSnap.data().hiddenProductNames || [];
-                    if (hiddenNames.length > 0) {
-                        const cards = document.querySelectorAll('.product-card');
-                        cards.forEach(card => {
-                            const h3 = card.querySelector('h3.product-title');
-                            if (h3 && hiddenNames.includes(h3.innerText.trim())) {
+                    const customNames = docSnap.data().customProductNames || {};
+                    
+                    const cards = document.querySelectorAll('.product-card');
+                    cards.forEach(card => {
+                        const h3 = card.querySelector('h3.product-title');
+                        if (h3) {
+                            const originalName = h3.innerText.trim();
+                            
+                            // Apply custom name if it exists
+                            if (customNames[originalName]) {
+                                h3.innerText = customNames[originalName];
+                            }
+                            
+                            // Hide if in hidden list (using original name)
+                            if (hiddenNames.includes(originalName)) {
                                 card.style.display = 'none';
                             }
-                        });
-                    }
+                        }
+                    });
                 }
             } catch(e) {
                 console.error("Firebase fetch error. Make sure Firestore rules allow public reads.", e);
             }
         }
-        hideDisabledProducts();
+        applyFirebaseSettings();
     </script>
 </body>
 </html>

@@ -105,6 +105,7 @@ const PRODUCTS = [
 ];
 
 window.hiddenProductNames = [];
+window.customProductNames = {};
 
 async function initDashboard() {
     try {
@@ -112,6 +113,7 @@ async function initDashboard() {
         const docSnap = await getDoc(docRef);
         if (docSnap.exists()) {
             window.hiddenProductNames = docSnap.data().hiddenProductNames || [];
+            window.customProductNames = docSnap.data().customProductNames || {};
         }
     } catch(e) {
         console.error("Firebase read error:", e);
@@ -127,12 +129,14 @@ function renderTable() {
     
     PRODUCTS.forEach(product => {
         const isHidden = window.hiddenProductNames.includes(product.name);
+        const displayName = window.customProductNames[product.name] || product.name;
         const tr = document.createElement('tr');
         tr.innerHTML = `
             <td>
                 <div class="product-cell">
                     <img src="${product.image}" class="product-thumb">
-                    <span class="product-name">${product.name}</span>
+                    <span class="product-name" id="name-${product.name.replace(/\s+/g, '-')}">${displayName}</span>
+                    ${displayName !== product.name ? `<small style="display:block;color:#888;font-size:0.75rem;">Original: ${product.name}</small>` : ''}
                 </div>
             </td>
             <td style="color: var(--text-muted);">${product.category}</td>
@@ -149,7 +153,7 @@ function renderTable() {
             </td>
             <td>
                 <div class="action-btns">
-                    <button class="btn-action" title="Edit (Coming soon)"><i class="fa-solid fa-pen"></i></button>
+                    <button class="btn-action" title="Edit Name" onclick="window.editProductName('${product.name.replace(/'/g, "\\'")}')"><i class="fa-solid fa-pen"></i></button>
                 </div>
             </td>
         `;
@@ -173,6 +177,20 @@ window.toggleProduct = function(name) {
     }
 }
 
+window.editProductName = function(originalName) {
+    const currentName = window.customProductNames[originalName] || originalName;
+    const newName = prompt(`Enter new name for: ${originalName}`, currentName);
+    
+    if (newName !== null && newName.trim() !== '') {
+        window.customProductNames[originalName] = newName.trim();
+        renderTable();
+    } else if (newName !== null && newName.trim() === '') {
+        // If they empty it, revert to original
+        delete window.customProductNames[originalName];
+        renderTable();
+    }
+}
+
 // --- Save & Deploy to Firebase ---
 const saveBtn = document.getElementById('saveBtn');
 
@@ -183,9 +201,10 @@ if (saveBtn) {
         
         try {
             await setDoc(doc(db, "settings", "visibility"), {
-                hiddenProductNames: window.hiddenProductNames
+                hiddenProductNames: window.hiddenProductNames,
+                customProductNames: window.customProductNames
             });
-            alert('Settings successfully saved to Firebase Database! The website will now hide these products instantly.');
+            alert('Settings successfully saved to Firebase Database! The website will now apply these updates instantly.');
         } catch (err) {
             console.error(err);
             alert('Failed to save to database. Make sure your Firestore Security Rules allow read/write access.');
