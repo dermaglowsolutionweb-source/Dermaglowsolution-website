@@ -90,8 +90,7 @@ const PRODUCTS = [
     { name: 'AI face analyser - Model 2', category: 'AI Face Analyser', image: '../images/ai_face_2_1780916153295.png' },
     { name: 'AI scalp analyzer - Model 1', category: 'AI Scalp Analyzer', image: '../images/ai_scalp_1_1780916166460.png' },
     { name: 'AI scalp analyzer - Model 2', category: 'AI Scalp Analyzer', image: '../images/ai_scalp_2_1780916181425.png' },
-    { name: 'EMS SCULPT', category: 'EMS Sculpt', image: '../images/ai_ems_sculpt_1.png' },
-    { name: 'EM FACE MACHINE', category: 'EMS Sculpt', image: '../images/ai_ems_sculpt_2.png' },
+
     { name: 'HIFU - Model 1', category: 'HIFU', image: '../images/ai_hifu_1_1780924655511.png' },
     { name: 'HIFU - Model 2', category: 'HIFU', image: '../images/ai_hifu_2_1780924671247.png' },
     { name: 'HIFU - Model 3', category: 'HIFU', image: '../images/ai_hifu_3_1780924687699.png' },
